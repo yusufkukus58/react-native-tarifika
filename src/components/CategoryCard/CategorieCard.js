@@ -7,7 +7,7 @@ import {
   Image,
 } from "react-native";
 
-export default function CategorieCard({ categorie, onSelect }) {
+const CategorieCard = ({ categorie, onSelect }) =>{
   return (
     <TouchableWithoutFeedback onPress={onSelect}>
       <View style={styles.cardContainer}>
@@ -29,6 +29,7 @@ export default function CategorieCard({ categorie, onSelect }) {
     </TouchableWithoutFeedback>
   );
 }
+export default CategorieCard;
 
 const styles = StyleSheet.create({
   cardContainer: {

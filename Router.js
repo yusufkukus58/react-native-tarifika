@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={Category}
+      <Stack.Navigator initialRouteName="Categories" 
         screenOptions={{
           headerTitleAlign:"center"
         }}

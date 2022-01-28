@@ -7,6 +7,7 @@ import MealCard from "../components/MealCard/MealCard"
 
 export default function Meals({ route, navigation }) {
   const { strCategory } = route.params;
+  console.log(strCategory)
 
   const { data, loading, error } = useFetchData(`${MEAL_URL}${strCategory}`);
 

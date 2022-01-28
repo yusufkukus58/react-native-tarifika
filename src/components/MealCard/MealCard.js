@@ -1,8 +1,8 @@
 import React from "react";
-import { View,Text, TouchableWithoutFeedbackComponent, Image, StyleSheet  } from "react-native";
+import { View,Text, TouchableWithoutFeedback, Image, StyleSheet  } from "react-native";
 const MealCard = ({onSelect,meals}) => {
     return(
-        <TouchableWithoutFeedbackComponent onPress={onSelect}>
+        <TouchableWithoutFeedback onPress={onSelect}>
 
         <View style={styles.container}>
         <Image style={styles.image} source={{ uri: meals.strMealThumb }} />
@@ -10,17 +10,19 @@ const MealCard = ({onSelect,meals}) => {
                 {meals.strMeal}
             </Text>
         </View>
-        </TouchableWithoutFeedbackComponent>
+        </TouchableWithoutFeedback>
     )
 }
-export default MealCard;
+export default MealCard
 const styles = StyleSheet.create({
     container:{
-        
         flex:1,
-
     },
-    image:{with:100,
-    height:100},
-    title:{}
+    image: {
+        width: '100%',
+        height: 200,
+    },
+    title: {
+        fontWeight:'bold'
+    }
 })
